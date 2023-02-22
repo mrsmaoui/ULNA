@@ -1,4 +1,4 @@
-# Ulna v2.6 - Diabetes Simulator
+# Ulna v2.6 - T1D Diabetes Simulator
 
 Ulna v2.6: Development Platform for Artificial Pancreas Algorithms
 
@@ -8,6 +8,8 @@ Dept of Computer Science, College of Sciences, Kuwait University, Kuwait
 
 mohamed.smaoui@ku.edu.kw
 
+## About:
+
 We present in this work a clinically validated cloud-based distributed platform that supports the development and comprehensive testing of single and dual-hormone algorithms for type 1 diabetes mellitus (T1DM).
 
 The platform is built on principles of object-oriented design and runs user algorithms in real-time virtual clinical trials utilizing a multi-threaded environment enabled by concurrent execution over a cloud infrastructure. The platform architecture isolates user algorithms located on personal machines from proprietary patient data running on the cloud. Users import a plugin into their algorithms (Matlab, Python, or Java) to connect to the platform. Once connected, users interact with a graphical interface to design experimental protocols for their trials. Protocols include trial duration in days, mealtimes and amounts, variability in mealtimes and amounts, carbohydrate counting errors, snacks, and onboard insulin levels.
@@ -16,43 +18,42 @@ The platform facilitates development by solving the ODE model in the cloud on la
 
 The platform utilizes the validated patient model to conduct virtual clinical trials for the rapid development and testing of closed-loop algorithms for T1DM.
 
-------------
-INSTALLATION
-------------
 
-To install the simulator graphical interface, please click on "Ulna-2.6.msi".
+## Citation:
+
+When citing this tool in any scientific publication please refer to it as: 
+
+Smaoui MR, Rabasa-Lhoret R, Haidar A. Development platform for artificial pancreas algorithms. PLoS One. 2020 Dec 17;15(12):e0243139. doi: 10.1371/journal.pone.0243139. PMID: 33332411; PMCID: PMC7746189.
+
+
+## Installation
+
+
+To install the simulator graphical interface, download and run the "Ulna-2.6.msi" (for Windows users) or "Ulna-2.6.0.pkg" (for mac users).
 
 The installation will create a shortcut for Ulna on your desktop upon completion.
 
 
-----------------------------
-CONTROLLER ALGORITHM PLUGINS
-----------------------------
+## Controller Algorithm Plugins
 
-Ulna has a simple controller algorithm installed that can be used directly without having to hook-up your external controller 
-algorithm. It is provided as a test algorithm.
+Ulna has a simple controller algorithm installed that can be used directly without having to hook-up your external controller algorithm. It is provided as a test algorithm.
 
-To develop your external controller algorithm with Ulna, please use one of the algorithm plugins available to you in this 
-release.
+To develop your external controller algorithm with Ulna, please use one of the algorithm plugins available to you in this release.
 
 
------------
-JAVA PLUGIN
------------
+## Java Plugin
 
-The AlgorithmPlugin-JAVA-11.zip can be imported as a project into an IDE such as Eclipse. It has a sample PID controller for you 
-to start with. If you import the project into an IDE such as Eclipse, you can run the plugin by starting the 
-StartSimulation.java file.
+The AlgorithmPlugin-JAVA-11.zip can be imported as a project into an IDE such as Eclipse. It has a sample PID controller for you to start with. If you import the project into an IDE such as Eclipse, you can run the plugin by starting the StartSimulation.java file.
+
+For a detailed description of how to import the .zip file into Eclipse, download and read the "JAVA-Tutorial.pdf".
 
 
--------------
-MATLAB PLUGIN
--------------
+## Matlab Plugin
 
-The AlgorithmPlugin-MATLAB.zip contains the following 3 files:
-	- T1D_Algorithm.m
-	- launch.sh
-	- NexusCommunicator_MATLAB.jar
+	The AlgorithmPlugin-MATLAB.zip contains the following 3 files:
+		- T1D_Algorithm.m
+		- launch.sh
+		- NexusCommunicator_MATLAB.jar
 
 
 You can develop your code inside the T1D_Algorithm.m file. This file contains 2 functions available to you that are called by 
@@ -77,14 +78,12 @@ This will launch the NexusCommunicator panel and plug your controller algorithm.
 a new simulation in the Ulna program. 
 
 
--------------
-PYTHON PLUGIN
--------------
+## Python Plugin
 
-The AlgorithmPlugin-PYTHON.zip contains the following 3 files:
-	- T1D_Algorithm.py
-	- launch.py
-	- NexusCommunicator_PYTHON.jar
+	The AlgorithmPlugin-PYTHON.zip contains the following 3 files:
+		- T1D_Algorithm.py
+		- launch.py
+		- NexusCommunicator_PYTHON.jar
 
 
 You can develop your code inside the T1D_Algorithm.py file. This file contains 2 functions available to you that are called by 
@@ -101,7 +100,11 @@ This method is expected to return your controller algorithm's response to this d
 parameters that must be returned at every call: insulinBasal, insulinBolus, glucagonBasal, glucagonBolus. 
 
 To test how well your algorithm performs on the virtual patients in the simulator, you mush plugin your algorithm to the 
-simulator. To do so, you need to execute the launch.py program. The launch.py program has 2 path variables that you must 
+simulator. To do so, you need to execute the launch.py program by running:
+
+	python launch.py
+	
+The launch.py program has 2 path variables that you must 
 update, one pointing to your T1D_Algorithm.py file and the other pointing to the NexusCommunicator_PYTHON.jar file. Once you 
 modify the file paths inside the launch.py file, you can run it in the command line with the following command: "python 
 launch.py"
@@ -110,14 +113,12 @@ This will launch the NexusCommunicator panel and plug your controller algorithm.
 a new simulation in the Ulna software. 
 
 
--------
-Contact
--------
+## Contact
 
-Web: http://csilab.io
+	Web: http://csilab.io
 
-Email: msmaoui@cs.ku.edu.kw
+	Email: msmaoui@cs.ku.edu.kw
 
-(c) 2023 Mohamed R. Smaoui
+	(c) 2023 Mohamed R. Smaoui
 
 
