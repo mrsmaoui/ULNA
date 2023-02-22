@@ -1,4 +1,20 @@
-Ulna v2.6 - Diabetes Simulator
+# Ulna v2.6 - Diabetes Simulator
+
+Ulna v2.6: Development Platform for Artificial Pancreas Algorithms
+
+(c) 2023 Mohamed R. Smaoui
+
+Dept of Computer Science, College of Sciences, Kuwait University, Kuwait
+
+mohamed.smaoui@ku.edu.kw
+
+We present in this work a clinically validated cloud-based distributed platform that supports the development and comprehensive testing of single and dual-hormone algorithms for type 1 diabetes mellitus (T1DM).
+
+The platform is built on principles of object-oriented design and runs user algorithms in real-time virtual clinical trials utilizing a multi-threaded environment enabled by concurrent execution over a cloud infrastructure. The platform architecture isolates user algorithms located on personal machines from proprietary patient data running on the cloud. Users import a plugin into their algorithms (Matlab, Python, or Java) to connect to the platform. Once connected, users interact with a graphical interface to design experimental protocols for their trials. Protocols include trial duration in days, mealtimes and amounts, variability in mealtimes and amounts, carbohydrate counting errors, snacks, and onboard insulin levels.
+
+The platform facilitates development by solving the ODE model in the cloud on large CPU-optimized machines, providing a 62% improvement in memory, speed and CPU utilization. Users can easily debug & modify code, test multiple strategies, and generate detailed clinical performance reports. We validated and integrated into the platform a glucoregulatory system of ordinary differential equations (ODEs) parameterized with clinical data to mimic the inter and intra-day variability of glucose responses of 15 T1DM patients.
+
+The platform utilizes the validated patient model to conduct virtual clinical trials for the rapid development and testing of closed-loop algorithms for T1DM.
 
 ------------
 INSTALLATION
